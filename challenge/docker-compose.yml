@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  app:
+    image: flask-app
+    build:
+      context: .
+      dockerfile: Dockerfile.flask
+    ports:
+      - "5002:5002"
+    depends_on:
+      - redis
+  redis:
+    build:
+      context: .
+      dockerfile: Dockerfile.redis
+    ports:
+      - "6379:6379"
