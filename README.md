@@ -1,3 +1,5 @@
+This is my video
+![Counter Video](static/countervideo.gif)
 # Flask & Redis - Multi container application
 
 ## Objective
