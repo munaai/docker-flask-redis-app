@@ -22,12 +22,3 @@ The goal is to create a **multi-container application** that consists of a simpl
 - **Redis**: Use the official Redis image and configure it with a `Dockerfile`.
 - Use **Docker Compose** to orchestrate both the Flask and Redis containers.
 
-## Steps to Run the Application
-
-### **1. Build and Run the Containers**
-
-First, clone this repository or navigate to your project directory. Then, use the following command to build and run the multi-container application with Docker Compose:
-
-```bash
-docker-compose up --build
-
