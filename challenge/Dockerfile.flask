@@ -1,11 +1,33 @@
-FROM python:3.8-slim
+# Stage 1 - Build stage
+FROM python:3.8-alpine AS build
 
 WORKDIR /app
 
-COPY . .
+# Install only necessary build dependencies
+RUN apk add --no-cache gcc libc-dev libffi-dev musl-dev
 
-RUN pip install --no-cache-dir -r requirement.txt
+# Copy requirement.txt and install dependencies
+COPY ./requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Stage 2 - Production stage
+FROM python:3.8-alpine
+
+WORKDIR /app
+
+# Install runtime dependencies (python3, pip, redis, and flask)
+RUN apk add --no-cache python3 py3-pip && \
+    pip install --no-cache-dir flask redis
+
+# Copy necessary files from the build stage
+COPY --from=build /app /app
+
+# Explicitly copy app.py to ensure it's in the correct directory
+COPY ./app.py /app/
+
+# Copy the static directory with the image file
+COPY ./static /app/static/
 
 EXPOSE 5002
-
 CMD ["python3", "app.py"]

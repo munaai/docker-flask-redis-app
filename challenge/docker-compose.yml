@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   app:
-    image: flask-app
+    image: flask-app:multistage5
     build:
       context: .
       dockerfile: Dockerfile.flask
