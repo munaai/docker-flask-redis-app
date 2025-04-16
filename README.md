@@ -22,3 +22,10 @@ The goal is to create a **multi-container application** that consists of a simpl
 - **Redis**: Use the official Redis image and configure it with a `Dockerfile`.
 - Use **Docker Compose** to orchestrate both the Flask and Redis containers.
 
+## Test the Application
+
+Access the Welcome Page:
+
+Open your browser and go to http://localhost:5000 to see the welcome message. Test the Visit Count:
+
+Navigate to http://localhost:5000/count to see the visit count increment each time you refresh the page.
