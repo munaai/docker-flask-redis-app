@@ -17,7 +17,7 @@ The goal is to create a **multi-container application** that consists of a simpl
 ### **Redis Database**
 - Use **Redis** as a key-value store to track the visit count.
 
-### **Dockerize Both Services**
+### **Dockerise Both Services**
 - **Flask App**: Dockerize the Flask web application using a `Dockerfile`.
 - **Redis**: Use the official Redis image and configure it with a `Dockerfile`.
 - Use **Docker Compose** to orchestrate both the Flask and Redis containers.
