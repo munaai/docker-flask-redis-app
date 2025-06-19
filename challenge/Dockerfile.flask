@@ -27,7 +27,7 @@ COPY --from=build /app /app
 COPY ./app.py /app/
 
 # Copy the static directory with the image file
-COPY ./static /app/static/
+COPY challenge/static /app/static/
 
 EXPOSE 5002
 CMD ["python3", "app.py"]
