@@ -17,7 +17,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: build docker image
-        run:  docker build -f Dockerfile.flask -t munaai/flask-redis-app:latest .
+        run:  docker build -f challenge/Dockerfile.flask -t munaai/flask-redis-app:latest .
       
       - name: push docker image
         run: docker push munaai/flask-redis-app:latest 
