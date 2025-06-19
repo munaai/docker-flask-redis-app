@@ -7,7 +7,7 @@ WORKDIR /app
 RUN apk add --no-cache gcc libc-dev libffi-dev musl-dev
 
 # Copy requirement.txt and install dependencies
-COPY ./requirements.txt .
+COPY challenge/requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
