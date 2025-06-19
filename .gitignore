@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+venv/
+
+# Docker
+*.log
+*.pid
+
+# VSCode
+.vscode/
+
+# Byte-compiled / backup files
+*.swp
+*~
+
+# GitHub Actions logs (if any)
+*.coverage
