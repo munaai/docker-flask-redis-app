@@ -28,4 +28,4 @@ Access the Welcome Page:
 
 Open your browser and go to http://localhost:5000 to see the welcome message. Test the Visit Count:
 
-Navigate to http://localhost:5000/count to see the visit count increment each time you refresh the page.
+Navigate to http://localhost:5000/count to see the visit count increment each time you refresh the page!
