@@ -24,7 +24,7 @@ RUN apk add --no-cache python3 py3-pip && \
 COPY --from=build /app /app
 
 # Explicitly copy app.py to ensure it's in the correct directory
-COPY ./app.py /app/
+COPY challenge/app.py /app/
 
 # Copy the static directory with the image file
 COPY challenge/static /app/static/
